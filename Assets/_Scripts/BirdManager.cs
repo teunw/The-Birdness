@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Assets._Scripts;
+using UnityEngine.SceneManagement;
 
 namespace Assets._Scripts
 {
@@ -10,6 +11,7 @@ namespace Assets._Scripts
     {
         // Yellow is the player
         public Bird Yellow, Red;
+        public string NextScene; 
 
         private Vector2 lastInput;
 
@@ -21,6 +23,15 @@ namespace Assets._Scripts
         void Update()
         {
             CheckInput();
+            CheckWinCondition();
+        }
+
+        private void CheckWinCondition()
+        {
+            if (Yellow.LevelDone && Red.LevelDone)
+            {
+                SceneManager.LoadScene(NextScene);
+            }
         }
 
         private void CheckInput()

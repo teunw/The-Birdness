@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEditor;
 using UnityEngine;
 
 namespace Assets._Scripts
@@ -9,6 +10,8 @@ namespace Assets._Scripts
     [RequireComponent(typeof(Transform), typeof(SpriteRenderer))]
     public class Bird : MonoBehaviour, MovementListener
     {
+        public bool LevelDone = false;
+
         private Transform _transform;
         private SpriteRenderer spriteRenderer;
         private Transform goalTransform;
@@ -26,10 +29,7 @@ namespace Assets._Scripts
 
         void Update()
         {
-            if (_transform.position == goalTransform.position)
-            {
-                Debug.Log("Done");
-            }
+            LevelDone = _transform.position == goalTransform.position;
         }
 
         public void OnMove(MovementDirection md, int val)
