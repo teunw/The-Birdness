@@ -33,7 +33,7 @@ namespace Assets._Scripts
         #endregion
 
         [HideInInspector]
-        public List<Vector3> InvalidTiles;
+        public List<Vector3> InvalidTiles = new List<Vector3>();
 
         public Vector2 LevelSize;
 
@@ -42,7 +42,6 @@ namespace Assets._Scripts
         void Start()
         {
             _transform = GetComponent<Transform>();
-            InvalidTiles = new List<Vector3>();
         }
 
         void OnDrawGizmos()
