@@ -7,7 +7,7 @@ namespace Assets._Scripts
     {
         private Transform transform;
 
-        public Bird bird;
+        public Color BirdColor = Color.black;
 
         void Start()
         {
@@ -19,9 +19,9 @@ namespace Assets._Scripts
             if (transform == null) transform = GetComponent<Transform>();
             Color c = Color.yellow;
 
-            if (bird != null)
+            if (BirdColor != Color.black)
             {
-                c = bird.Color;
+                c = BirdColor;
             }
             Gizmos.color = c;
 

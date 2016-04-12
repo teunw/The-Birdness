@@ -1,0 +1,59 @@
+﻿{
+    "Highscores": [
+        {
+            "PlayerName": "",
+            "Level": "Level3",
+            "Moves": 9
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level3",
+            "Moves": 13
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level3",
+            "Moves": 5
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level1",
+            "Moves": 26
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level2",
+            "Moves": 11
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level1",
+            "Moves": 18
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level2",
+            "Moves": 5
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level3",
+            "Moves": 5
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level1",
+            "Moves": 16
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level2",
+            "Moves": 9
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level3",
+            "Moves": 5
+        }
+    ]
+}
