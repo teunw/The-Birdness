@@ -41,6 +41,12 @@ namespace Assets._Scripts
             _transform = GetComponent<Transform>();
         }
 
+        public bool IsInside(Vector2 pos)
+        {
+            Rect rect = new Rect(_transform.position.x - (LevelSize.x / 2), _transform.position.y - (LevelSize.y / 2), LevelSize.x, LevelSize.y);
+            return rect.Contains(pos);
+        }
+
         void OnDrawGizmos()
         {
             if (_transform == null) _transform = GetComponent<Transform>();

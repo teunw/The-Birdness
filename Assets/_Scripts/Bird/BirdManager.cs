@@ -77,9 +77,12 @@ namespace Assets._Scripts
             }
             if (side == MovementDirection.NONE) return;
             int moveVal = (side == MovementDirection.HORIZONTAL) ? (int) movement.x : (int) movement.y;
-            Yellow.OnMove(side, moveVal);
-            Red.OnMove(side, moveVal * -1);
-            uiManager.MovesMade += 1;
+            bool yellow = Yellow.OnMove(side, moveVal);
+            bool red = Red.OnMove(side, moveVal * -1);
+            if (yellow || red)
+            {
+                uiManager.MovesMade += 1;
+            }
         }
     }
 }

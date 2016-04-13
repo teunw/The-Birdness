@@ -10,7 +10,7 @@ namespace Assets._Scripts
     public interface MovementListener
     {
 
-        void OnMove(MovementDirection md, int value);
+        bool OnMove(MovementDirection md, int value);
 
     }
 }

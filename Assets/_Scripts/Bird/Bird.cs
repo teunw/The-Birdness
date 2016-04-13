@@ -34,7 +34,7 @@ namespace Assets._Scripts
             LevelDone = Transform.position == goalTransform.position;
         }
 
-        public void OnMove(MovementDirection md, int val)
+        public bool OnMove(MovementDirection md, int val)
         {
             Vector3 p = Transform.position;
             Vector3 newPos;
@@ -50,18 +50,19 @@ namespace Assets._Scripts
             }
             else
             {
-                return;
+                return false;
             }
 
-            if (LevelManager.getInstance().InvalidTiles.Contains(newPos))
+            if (LevelManager.getInstance().InvalidTiles.Contains(newPos) || !LevelManager.getInstance().IsInside(newPos))
             {
-                return;
+                return false;
             }
             PreviousPosition = Transform.position;
             Transform.position = newPos;
 
             spriteRenderer.flipX = val == 1;
             if (reFlip) spriteRenderer.flipX = !spriteRenderer.flipX;
+            return true;
         }
 
         void OnDrawGizmos()
