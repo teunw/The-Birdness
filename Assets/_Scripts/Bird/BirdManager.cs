@@ -13,7 +13,9 @@ namespace Assets._Scripts
         public Bird Yellow, Red;
         public string NextScene;
         public UIManager uiManager;
+        public Sprite SquishyBird;
 
+        private Sprite redSprite;
         private Vector2 lastInput;
         private bool BusyLoading;
 
@@ -82,6 +84,17 @@ namespace Assets._Scripts
             if (yellow || red)
             {
                 uiManager.MovesMade += 1;
+            }
+            if (Yellow.Transform.position == Red.Transform.position)
+            {
+                Yellow.SpriteRenderer.enabled = false;
+                redSprite = Red.SpriteRenderer.sprite;
+                Red.SpriteRenderer.sprite = SquishyBird;
+            }
+            else if (redSprite != null)
+            {
+                Red.SpriteRenderer.sprite = redSprite;
+                Yellow.SpriteRenderer.enabled = Red.SpriteRenderer.enabled = true;
             }
         }
     }

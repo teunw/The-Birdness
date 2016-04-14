@@ -15,7 +15,7 @@ namespace Assets._Scripts
         public Transform Transform;
         public Vector3 PreviousPosition;
         public Vector3 LastMove;
-        private SpriteRenderer spriteRenderer;
+        public SpriteRenderer SpriteRenderer;
         private Transform goalTransform;
 
         public bool reFlip;
@@ -25,7 +25,7 @@ namespace Assets._Scripts
         void Start()
         {
             Transform = GetComponent<Transform>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            SpriteRenderer = GetComponent<SpriteRenderer>();
             goalTransform = Goal.GetComponent<Transform>();
         }
 
@@ -60,8 +60,8 @@ namespace Assets._Scripts
             PreviousPosition = Transform.position;
             Transform.position = newPos;
 
-            spriteRenderer.flipX = val == 1;
-            if (reFlip) spriteRenderer.flipX = !spriteRenderer.flipX;
+            SpriteRenderer.flipX = val == 1;
+            if (reFlip) SpriteRenderer.flipX = !SpriteRenderer.flipX;
             return true;
         }
 
