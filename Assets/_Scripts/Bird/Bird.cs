@@ -52,17 +52,22 @@ namespace Assets._Scripts
             {
                 return false;
             }
-
-            if (LevelManager.getInstance().InvalidTiles.Contains(newPos) || !LevelManager.getInstance().IsInside(newPos))
+            if (CanMove(newPos))
             {
                 return false;
             }
+
             PreviousPosition = Transform.position;
             Transform.position = newPos;
 
             SpriteRenderer.flipX = val == 1;
             if (reFlip) SpriteRenderer.flipX = !SpriteRenderer.flipX;
             return true;
+        }
+
+        public bool CanMove(Vector3 newPos)
+        {
+            return LevelManager.getInstance().InvalidTiles.Contains(newPos) || !LevelManager.getInstance().IsInside(newPos);
         }
 
         void OnDrawGizmos()

@@ -16,7 +16,7 @@ public class Ice : MonoBehaviour
     void Update()
     {
         Bird b = CheckBird();
-        if (b != null)
+        if (b != null && !b.CanMove(b.Transform.position + b.LastMove))
         {
             b.Transform.position += b.LastMove;
         }
