@@ -249,6 +249,66 @@
             "PlayerName": "",
             "Level": "Level6",
             "Moves": 24
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level6",
+            "Moves": 21
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level6",
+            "Moves": 22
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level2",
+            "Moves": 14
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level3",
+            "Moves": 21
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level4",
+            "Moves": 5
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level5",
+            "Moves": 9
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level7",
+            "Moves": 1
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level7",
+            "Moves": 13
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level7",
+            "Moves": 37
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level7",
+            "Moves": 9
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level7",
+            "Moves": 16
+        },
+        {
+            "PlayerName": "",
+            "Level": "Level7",
+            "Moves": 10
         }
     ]
 }
