@@ -24,11 +24,11 @@ public class Ice : MonoBehaviour
 
     public Bird CheckBird()
     {
-        if (BirdManager.Red.Transform.position == _transform.position)
+        if (BirdManager.Red.Transform.position == _transform.position && BirdManager.Red.SpriteRenderer.enabled)
         {
             return BirdManager.Red;
         }
-        if (BirdManager.Yellow.Transform.position == _transform.position)
+        if (BirdManager.Yellow.Transform.position == _transform.position && BirdManager.Yellow.SpriteRenderer.enabled)
         {
             return BirdManager.Yellow;
         }

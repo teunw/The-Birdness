@@ -27,7 +27,16 @@ namespace Assets._Scripts
         void Update()
         {
             CheckInput();
+            CheckRestartInput();
             CheckWinCondition();
+        }
+
+        private void CheckRestartInput()
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
 
         private void CheckWinCondition()
@@ -99,3 +108,4 @@ namespace Assets._Scripts
         }
     }
 }
+
